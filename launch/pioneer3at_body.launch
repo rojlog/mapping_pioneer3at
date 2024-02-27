@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  
+   <!-- Agregamos tiempo de ROS con Gazebo para que se sincronizen -->
+   <param name="/use_sim_time" value="true" />
+   
+   <!-- Buscamos en los modelos de gazebo el world_empty --> 
+   <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+   <!-- El archivo pioneer3at.xml contiene el llamado a las macros en los archivos .xacro de las llantas
+  	e incluye los <gazebo> <plugin> sensor - gazebo/public_state </plugin> </gazebo>
+  	de el estado del robot, posicion y de la camara. ESte .xml realiza la conversion y nos ayuda a tener un 
+  	launch mucho mas pequeño y entendible-->
+   <include file="$(find mapping_pioneer3at)/launch/pioneer3at.xml"/>
+  
+   <!-- Cargamos el robot en Gazebo -->
+   <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model pioneer3at_body" />
+  
+</launch>

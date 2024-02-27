@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="mappingpioneer3at">
+
+<xacro:include filename="$(find mapping_pioneer3at)/robots/pioneer3at_body.xacro"/>
+
+<!-- Paquete instalado para la descripción del robot -->
+<xacro:include filename="$(find pr2_description)/urdf/common.xacro" />
+
+<xacro:p3at_front suffix="left" reflect="1"/>
+<xacro:p3at_front suffix="right" reflect="-1"/>
+<xacro:p3at_back suffix="left" reflect="1"/>
+<xacro:p3at_back suffix="right" reflect="-1"/>
+
+<xacro:p3at_gazebo_ext/> 
+
+</robot>
