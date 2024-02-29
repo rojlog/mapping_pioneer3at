@@ -1,0 +1,50 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/rojlog/Pioneer3AT/devel/include/**",
+        "/home/rojlog/catkin_ws/devel/include/**",
+        "/home/rojlog/autominy/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/bno055_usb_stick/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/emergency_stop/include/**",
+        "/home/rojlog/Pioneer3AT/src/m-explore/explore/include/**",
+        "/home/rojlog/Pioneer3AT/src/gazebo_ros_pkgs/gazebo_plugins/include/**",
+        "/home/rojlog/Pioneer3AT/src/gazebo_ros_pkgs/gazebo_ros/include/**",
+        "/home/rojlog/Pioneer3AT/src/gazebo_ros_pkgs/gazebo_ros_control/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/hardware_calibration/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/autominy_simulator/hector_gazebo_plugins/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/lidar_pose_estimation/include/**",
+        "/home/rojlog/Pioneer3AT/src/line_follower/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/low_voltage_shutdown/include/**",
+        "/home/rojlog/Pioneer3AT/src/mapping_pioneer3at/include/**",
+        "/home/rojlog/Pioneer3AT/src/m-explore/map_merge/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/obstacle_detection/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/odometry/include/**",
+        "/home/rojlog/Pioneer3AT/src/opencv_apps/include/**",
+        "/home/rojlog/Pioneer3AT/src/p3at_tutorial/include/**",
+        "/home/rojlog/primer_urdf/src/pioneer/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/remote_control/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/road_marking_localization/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/serial/include/**",
+        "/home/rojlog/catkin_ws/src/sicktoolbox/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/autominy_simulator/sim_car_controller/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/stereo_camera_pose_estimation/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/tick_calibration/include/**",
+        "/home/rojlog/Pioneer3AT/src/vision/include/**",
+        "/home/rojlog/autominy/catkin_ws/src/visualization_converter/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
