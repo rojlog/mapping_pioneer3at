@@ -12,8 +12,19 @@
   	de el estado del robot, posicion y de la camara. ESte .xml realiza la conversion y nos ayuda a tener un 
   	launch mucho mas pequeño y entendible-->
    <include file="$(find mapping_pioneer3at)/launch/pioneer3at.xml"/>
+   
+   <!-- Agregamos los parametros de gmapping -->
+   <include file="$(find mapping_pioneer3at)/slam_gmapping/gmapping.launch"/>
   
    <!-- Cargamos el robot en Gazebo -->
    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model pioneer3at_body" />
+  
+   <!-- Lanzamos el nodo de rviz -->   
+   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mapping_pioneer3at)/launch_rviz/gazebo.rviz"/>
+  
+  
+    <!-- Necesarios para actualizar la posición del robot y sea visible en rviz -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
   
 </launch>

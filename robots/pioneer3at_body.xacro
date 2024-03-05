@@ -203,7 +203,7 @@
         <range>
           <min>0.10</min>
           <!--<max>10.0</max> ORIGINAL ESTO PARA DEJAR MENOS ESPACIOS AL SENSAR-->
-          <max>10.0</max>
+          <max>80.0</max>
           <resolution>0.01</resolution>  <!-- 10 mm/± 15 mm -->
         </range>
         <noise>
