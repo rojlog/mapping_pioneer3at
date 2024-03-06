@@ -173,7 +173,7 @@
       </geometry>
     </collision>
     <visual>
-      <origin xyz="0.105 0 0.07" rpy="0 0 0"/> 
+      <origin xyz="0.030 0 0.0" rpy="0 0 0"/> 
       <geometry>
         <mesh filename="package://mapping_pioneer3at/meshes/hokuyo1.dae"/>
       </geometry>
@@ -202,9 +202,8 @@
         </scan>
         <range>
           <min>0.10</min>
-          <!--<max>10.0</max> ORIGINAL ESTO PARA DEJAR MENOS ESPACIOS AL SENSAR-->
-          <max>80.0</max>
-          <resolution>0.01</resolution>  <!-- 10 mm/± 15 mm -->
+          <max>30.0</max>
+          <resolution>0.01</resolution>  
         </range>
         <noise>
           <type>gaussian</type>
