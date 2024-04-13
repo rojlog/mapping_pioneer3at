@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="p3at">
+
+<!-- Agregamos los xacro que coomponen a robot, el cuerpo p3at_body y los sensores p3at_sensor -->
+<xacro:include filename="$(find mapping_pioneer3at)/robots/p3at_body.xacro"/> 
+<xacro:include filename="$(find mapping_pioneer3at)/robots/p3at_sensors.xacro"/> 
+
+<!-- Paquete para uso de baterias y control manager
+<xacro:include filename="$(find pr2_description)/urdf/common.xacro" /> -->
+
+
+</robot>

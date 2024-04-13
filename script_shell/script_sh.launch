@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  
+      <node name="foo" pkg="mapping_pioneer3at" type="spawn_model.sh" />
+  
+</launch>
+

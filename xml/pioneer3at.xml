@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Convertimos xacro a URDF y cargarlo en el parámetro 'robot_description' todo el cuerpo del robot junto con sus
+       sensores. -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find mapping_pioneer3at)/robots/p3at_robot.xacro" />
+
+</launch>
+
+
+
+

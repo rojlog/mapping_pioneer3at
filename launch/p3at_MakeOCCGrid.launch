@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<launch>
+
+   <arg name="pkg_gazebo_worlds" default="$(find mapping_pioneer3at)"/>
+  
+   <!-- Agregamos tiempo de ROS con Gazebo para que se sincronizen -->
+   <param name="/use_sim_time" value="true" />
+  
+   <!-- Buscamos en los modelos de gazebo el world_empty --> 
+   <include file="$(find gazebo_ros)/launch/empty_world.launch"> 
+        
+        <!-- Agregamos el corral al mundo -->
+        <arg name="world_name" value="$(find mapping_pioneer3at)/worlds/square_room.world"/>	
+        <!-- <arg name="world_name" value="$(find mapping_pioneer3at)/worlds/corral.world"/>	 -->
+
+        <!-- Si gui:=false lanza la simulacion sin la interfaz de gazebo-->  
+        <!-- <arg name="gui" value="false"/>	 -->
+   </include>
+
+   <!-- El archivo pioneer3at.xml contiene el llamado a las macros en los archivos .xacro de las llantas
+  	e incluye los <gazebo> <plugin> sensor - gazebo/public_state </plugin> </gazebo>
+  	de el estado del robot, posicion y de la camara. Este .xml realiza la conversion y nos ayuda a tener un 
+  	launch mucho mas pequeño y entendible-->
+   <include file="$(find mapping_pioneer3at)/xml/pioneer3at.xml"/>
+  
+   <!-- Cargamos el servico spawn_model en Gazebo y esperamos con un delay en shell a que el gazebo este cargado para lanzar el servicio spawn-->
+   <include file="$(find mapping_pioneer3at)/script_shell/script_sh.launch"/>  
+
+   <!-- Lanzamos el nodo de rviz -->
+   <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mapping_pioneer3at)/launch_rviz/gazebo.rviz"/> -->
+     
+  
+    <!-- Necesarios para actualizar la posición del robot y sea visible en rviz -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>  
+  
+</launch>
